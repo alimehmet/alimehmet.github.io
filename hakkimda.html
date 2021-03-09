@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
+  <script>
+    var doc = new jsPDF();
+    var h1 = document.querySelector('#heading');
+    doc.fromHTML(h1, 15, 15);
+    doc.save("cv.pdf");
+  </script>
+  <script src="scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="pdfFromHTML.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stil.css">
+  <title>Hakkımda</title>
+</head>
+
+<body>
+  <header class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 m-auto d-none d-lg-block">
+          <a href="index.html"><img class="logo" src="img/logo/mali.png" alt=""></a>
+        </div>
+        <div class="col-md-12 col-lg-9">
+
+          <hr>
+
+          <nav id="default2" class="navbar navbar-expand-md navbar-light bg-light default2">
+            <div id="nav-size" class="container-fuil">
+              <div class="row">
+                <div class="d-none d-sm-block d-md-none">
+                  <a class="navbar-brand" href="index.html">Ongan</a>
+                </div>
+
+
+                <a id='logo-small' class="navbar-brand" href="index.html"><img src="img/logo/mali.png" alt=""></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Ana Sayfa<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link"  href="hakkimda.html">Hakkımda<span class="sr-only"></span></a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolyo</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item"  href="portfolyo3.html">Görüntü İşleme Projesi</a>
+                        <a class="dropdown-item"  href="portfolyo2.html">Image Croper</a>
+                        <a class="dropdown-item"  href="portfolyo1.html">Google'dan Toplu Resim İndirme</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-xl" id="editable">
+
+    <div class="res">
+      <div class="content" id="HTMLtoPDF">
+        <h2>About Me</h2>
+        <br>
+        <h5>Some people have good ideas that can't go into reality.
+          <br>
+          Not me.
+          <br>
+          Because I can make every great idea I have into a reality by coding and developing inventive software solutions. </h5>
+          <div class="container-xl"><img class="img-fluid" id="anas" src="https://paulsmithson.com/assets/idea%20graphic%201.png" alt="" width="%100" height="430px"></div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer1">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-3">
+          <ul class="list-unstyled clear-margins">
+
+            <li class="widget-container widget_nav_menu">
+
+              <h1 class="title-widget">SİTE HARİTASI</h1>
+
+              <ul>
+                <li><a class="vtext" href="index.html"><i class="fa fa-angle-double-right vtext"></i>ANA SAYFA</a></li>
+                <li><a class="vtext" href="hakkimda.html"><i class="fa fa-angle-double-right vtext"></i>HAKKIMDA</a></li>
+                <li><a class="vtext" href="iletisim.html"><i class="fa fa-angle-double-right vtext"></i>İLETİŞİM</a></li>
+              </ul>
+
+            </li>
+
+          </ul>
+
+
+        </div>
+
+
+
+        <div class="col-lg-3 col-md-3">
+
+          <ul class="list-unstyled clear-margins">
+
+            <li class="widget-container widget_nav_menu">
+
+              <h1 class="title-widget">PROJELER</h1>
+
+              <ul>
+              <li><a class="vtext" href="portfolyo3.html"><i class="fa fa-angle-double-right vtext"></i>GÖRÜNTÜ İŞLEME PROJESİ</a></li>
+                <li><a class="vtext" href="portfolyo1.html"><i class="fa fa-angle-double-right vtext"></i>GOOGLE'DAN TOPLU RESİM İNDİRME</a></li>
+                <li><a class="vtext" href="portfolyo2.html"><i class="fa fa-angle-double-right vtext"></i>IMAGE CROPPER</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+
+
+        <div class="col-lg-3 col-md-3">
+
+          <ul class="list-unstyled clear-margins">
+
+            <li class="widget-container widget_nav_menu">
+
+              <h1 class="title-widget">HESAPLAR</h1>
+
+              <ul>
+                <li><a class="vtext" href="https://www.linkedin.com/in/maliongan/"><i class="fa fa-angle-double-right vtext"></i>LINKEDIN</a></li>
+                <li><a class="vtext" href="https://github.com/alimehmet"><i class="fa fa-angle-double-right vtext"></i>GITHUB</a></li>
+                <li><a class="vtext" href="https://www.hackerrank.com/maliongan/"><i class="fa fa-angle-double-right vtext"></i>HACKERRANK</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+
+        <div class="col-lg-3 col-md-3">
+
+
+
+          <ul class="list-unstyled clear-margins">
+
+            <li class="widget-container widget_recent_news">
+
+              <h1 class="title-widget">İLETİŞİM BİLGİLERİ</h1>
+
+              <div class="footerp">
+
+                <h2 class="title-median">Mehmet Ali Ongan</h2>
+                <p><b><i class="fa fa-envelope"></i>
+                  </b> <a href="mailto:maliongan@hotmail.com" class="vtext"> maliongan@hotmail.com</a></p>
+                <p><b><i class="fa fa-map-marker" aria-hidden="true"></i></b> Istanbul/Turkey</p>
+              </div>
+
+              <div class="social-icons">
+
+                <ul class="nomargin">
+
+                  <a href="https://www.linkedin.com/in/maliongan/"><i class="fa fa-linkedin-square fa-3x social-li" id="social"></i></a>
+                  <a href="https://github.com/alimehmet/"><i class="fa fa-github-square fa-3x social-gh" id="social"></i></a>
+                  <a href="https://www.hackerrank.com/maliongan/"><i class="fab fa-hackerrank fa-3x social-hr" id="social"></i></a>
+                  <a href="mailto:maliongan@gmail.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
+
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+          <div class="copyright">
+
+            © 2021 Ongan Tüm hakları saklıdır.
+
+          </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+          <div class="design">
+            <a href="#top" id="sayfabasi"><i class="fas fa-arrow-up"></i>  Sayfa başına dön</a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</main>
+</body>
+
+</html>
