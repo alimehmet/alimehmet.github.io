@@ -147,6 +147,17 @@ img.logo {
   color: #4d8439;
   text-decoration: none;
 }
+.vtext:hover {
+  color: #4d8439;
+}
+
+.linkedtext {
+  text-decoration: none;
+  color: black;
+}
+.linkedtext:hover {
+  color: black;
+}
 
 .title-widget {
   color: #898989;
@@ -154,7 +165,6 @@ img.logo {
   font-weight: 300;
   line-height: 1;
   position: relative;
-  text-transform: uppercase;
   font-family: 'Fjalla One', sans-serif;
   margin-top: 0;
   margin-right: 0;
@@ -189,11 +199,10 @@ img.logo {
 }
 
 .widget_nav_menu ul li {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   position: relative;
-  text-transform: uppercase;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 7px;
   padding-bottom: 7px;
@@ -202,7 +211,7 @@ img.logo {
 
 .title-median {
   color: #636363;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 20px;
   margin: 0 0 15px;
   font-family: 'Fjalla One', sans-serif;
