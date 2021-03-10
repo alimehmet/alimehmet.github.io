@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="icon" href="https://raw.githubusercontent.com/alimehmet/alimehmet.github.io/main/img/logo/favicon.ico">
   <link rel="stylesheet" href="stil.css">
-  <title>Google'dan Toplu Resim İndirme</title>
+  <title>İletişim</title>
 </head>
 
 <body>
@@ -75,13 +75,70 @@
     </div>
   </header>
   <main role="main">
-    <div class="container-xl" id="HTMLtoPDF">
-      <h2>Google Görsellerden Toplu Resim İndirme</h2>
-      <h5>Michael Sallomi tarafından oluşturulmuş bu metotta makine öğrenmesi, derin öğrenme vb. için Google görsellerden nasıl resim toplanacağı anlatılacaktır. Yönergeler için PDF dosyasına bakınız.</h5>
-      <i class="fa fa-github" style="font-size:20px"></i>
-      <a class="vtext"  href="https://github.com/alimehmet/gooogle-gorseller-toplu-resim-indirme">Detaylı bilgi için tıklayın</a>
-      <embed src="google_gorsellerden_resim_cekme.pdf" width="100%" height="1250px" id="HTMLtoPDF" />
-    </div>
+
+    <div class="container">
+      <!-- Row start -->
+      <div class="row">
+        <div class="col-md-12 col-sm-6 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+              <i class="icon-calendar"></i>
+              <h3 class="panel-title" id="iletisim">İletişim Formu</h3>
+            </div>
+
+            <div class="panel-body">
+              <form class="form-horizontal row-border" name="form1" action="https://formspree.io/f/xbjppynr" method="POST">
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Ad</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" name="ad" placeholder="Ad">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Soyad</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" name="soyad" placeholder="Soyad">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Doğum Tarihi</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" name="dogum_tarihi" placeholder="GG/AA/YYYY">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Telefon Numarası</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" name="telefon_numarasi" placeholder="05555555555 veya 0555 555 55 55">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">E-Mail</label>
+                  <div class="col-md-10">
+                    <input class="form-control" type="text" name="mail_adresi" placeholder="E-Mail">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Mesaj</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" rows="4" name="mesaj" id="comment" placeholder="Mesajınız.."></textarea>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary" type="submit" onclick="return control(document.form1.ad,document.form1.soyad,document.form1.dogum_tarihi,document.form1.telefon_numarasi,document.form1.mail_adresi,document.form1.mesaj);"
+                    id="gonderbtn">Gönder</button>
+                  <input type="hidden" value="iletisim.html">
+                </div>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row end -->
+
+
     </div>
 
 
