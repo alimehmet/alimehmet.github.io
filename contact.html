@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="icon" href="https://raw.githubusercontent.com/alimehmet/alimehmet.github.io/main/img/logo/favicon.ico">
   <link rel="stylesheet" href="stil.css">
-  <title>İletişim</title>
+  <title>Contact</title>
 </head>
 
 <body>
@@ -37,7 +37,6 @@
                   <a class="navbar-brand" href="index.html">Ongan</a>
                 </div>
 
-
                 <a id='logo-small' class="navbar-brand" href="index.html"><img src="https://raw.githubusercontent.com/alimehmet/alimehmet.github.io/main/img/logo/mali.png" alt=""></a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,22 +46,21 @@
                 <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Ana Sayfa<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link"  href="hakkimda.html">Hakkımda<span class="sr-only"></span></a>
-
+                      <a class="nav-link" href="about.html">About<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolyo</a>
+                      <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
                       <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item"  href="portfolyo3.html">Görüntü İşleme Projesi</a>
-                        <a class="dropdown-item"  href="portfolyo2.html">Image Croper</a>
-                        <a class="dropdown-item"  href="portfolyo1.html">Google'dan Toplu Resim İndirme</a>
+                        <a class="dropdown-item" href="portfolio3.html">Image Processing Project</a>
+                        <a class="dropdown-item" href="portfolio2.html">Image Cropper</a>
+                        <a class="dropdown-item" href="portfolio1.html">Bulk Image Download from Google</a>
                       </div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="iletisim.html">İletişim</a>
+                      <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                   </ul>
 
@@ -83,65 +81,58 @@
           <div class="panel panel-default">
             <div class="panel-heading clearfix">
               <i class="icon-calendar"></i>
-              <h3 class="panel-title" id="iletisim">İletişim Formu</h3>
+              <h3 class="panel-title" id="contact">Contact Form</h3>
             </div>
 
             <div class="panel-body">
               <form class="form-horizontal row-border" name="form1" action="https://formspree.io/f/xbjppynr" method="POST">
                 <div class="form-group">
-                  <label class="col-md-2 control-label">Ad</label>
+                  <label class="col-md-2 control-label">First Name</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="ad" placeholder="Ad">
+                    <input class="form-control" type="text" name="first_name" placeholder="First Name">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-2 control-label">Soyad</label>
+                  <label class="col-md-2 control-label">Last Name</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="soyad" placeholder="Soyad">
+                    <input class="form-control" type="text" name="last_name" placeholder="Last Name">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-2 control-label">Doğum Tarihi</label>
+                  <label class="col-md-2 control-label">Date of Birth</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="dogum_tarihi" placeholder="GG/AA/YYYY">
+                    <input class="form-control" type="text" name="birth_date" placeholder="DD/MM/YYYY">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-2 control-label">Telefon Numarası</label>
+                  <label class="col-md-2 control-label">Phone Number</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="telefon_numarasi" placeholder="05555555555 veya 0555 555 55 55">
+                    <input class="form-control" type="text" name="phone_number" placeholder="05555555555 or 0555 555 55 55">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">E-Mail</label>
                   <div class="col-md-10">
-                    <input class="form-control" type="text" name="mail_adresi" placeholder="E-Mail">
+                    <input class="form-control" type="text" name="email" placeholder="E-Mail">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-md-2 control-label">Mesaj</label>
+                  <label class="col-md-2 control-label">Message</label>
                   <div class="col-md-10">
-                    <textarea class="form-control" rows="4" name="mesaj" id="comment" placeholder="Mesajınız.."></textarea>
+                    <textarea class="form-control" rows="4" name="message" id="comment" placeholder="Your message.."></textarea>
                   </div>
                 </div>
                 <div class="d-grid gap-2 d-md-block">
-                  <button class="btn btn-primary" type="submit" onclick="return control(document.form1.ad,document.form1.soyad,document.form1.dogum_tarihi,document.form1.telefon_numarasi,document.form1.mail_adresi,document.form1.mesaj);"
-                    id="gonderbtn">Gönder</button>
-                  <input type="hidden" value="iletisim.html">
+                  <button class="btn btn-primary" type="submit" onclick="return control(document.form1.first_name,document.form1.last_name,document.form1.birth_date,document.form1.phone_number,document.form1.email,document.form1.message);" id="sendbtn">Send</button>
+                  <input type="hidden" value="contact.html">
                 </div>
               </form>
-
-
             </div>
           </div>
         </div>
       </div>
       <!-- Row end -->
-
-
     </div>
-
-
 
     <footer class="footer1">
       <div class="container">
@@ -153,22 +144,19 @@
 
               <li class="widget-container widget_nav_menu">
 
-                <h1 class="title-widget">Site Haritası</h1>
+                <h1 class="title-widget">Site Map</h1>
 
                 <ul>
-                  <li><a class="vtext" href="index.html"><i class="fa fa-angle-double-right vtext"></i>Ana Sayfa</a></li>
-                  <li><a class="vtext" href="hakkimda.html"><i class="fa fa-angle-double-right vtext"></i>Hakkımda</a></li>
-                  <li><a class="vtext" href="iletisim.html"><i class="fa fa-angle-double-right vtext"></i>İletişim</a></li>
+                  <li><a class="vtext" href="index.html"><i class="fa fa-angle-double-right vtext"></i>Home</a></li>
+                  <li><a class="vtext" href="about.html"><i class="fa fa-angle-double-right vtext"></i>About</a></li>
+                  <li><a class="vtext" href="contact.html"><i class="fa fa-angle-double-right vtext"></i>Contact</a></li>
                 </ul>
 
               </li>
 
             </ul>
 
-
           </div>
-
-
 
           <div class="col-lg-3 col-md-3">
 
@@ -176,21 +164,18 @@
 
               <li class="widget-container widget_nav_menu">
 
-                <h1 class="title-widget">Portfolyo</h1>
+                <h1 class="title-widget">Portfolio</h1>
 
                 <ul>
-                <li><a class="vtext" href="portfolyo3.html"><i class="fa fa-angle-double-right vtext"></i>Görüntü İşleme Projesi̇</a></li>
-                  <li><a class="vtext" href="portfolyo1.html"><i class="fa fa-angle-double-right vtext"></i>Google'dan Toplu Resim İndirme</a></li>
-                  <li><a class="vtext" href="portfolyo2.html"><i class="fa fa-angle-double-right vtext"></i>Image Cropper</a></li>
+                <li><a class="vtext" href="portfolio3.html"><i class="fa fa-angle-double-right vtext"></i>Image Processing Project</a></li>
+                  <li><a class="vtext" href="portfolio1.html"><i class="fa fa-angle-double-right vtext"></i>Bulk Image Download from Google</a></li>
+                  <li><a class="vtext" href="portfolio2.html"><i class="fa fa-angle-double-right vtext"></i>Image Cropper</a></li>
                 </ul>
               </li>
 
             </ul>
 
-
           </div>
-
-
 
           <div class="col-lg-3 col-md-3">
 
@@ -198,7 +183,7 @@
 
               <li class="widget-container widget_nav_menu">
 
-                <h1 class="title-widget">Hesaplar</h1>
+                <h1 class="title-widget">Accounts</h1>
 
                 <ul>
                   <li><a class="vtext" href="https://www.linkedin.com/in/maliongan/"><i class="fa fa-angle-double-right vtext"></i>LinkedIn</a></li>
@@ -209,25 +194,20 @@
 
             </ul>
 
-
           </div>
 
-
           <div class="col-lg-3 col-md-3">
-
-
 
             <ul class="list-unstyled clear-margins">
 
               <li class="widget-container widget_recent_news">
 
-                <h1 class="title-widget">İletişim Bilgileri</h1>
+                <h1 class="title-widget">Contact Information</h1>
 
                 <div class="footerp">
 
                   <h3 class="title-median">Mehmet Ali Ongan</h3>
-                  <p><b><i class="fa fa-envelope"></i>
-                    </b> <a href="mailto:maliongan@hotmail.com" class="vtext"> maliongan@hotmail.com</a></p>
+                  <p><b><i class="fa fa-envelope"></i></b> <a href="mailto:maliongan@hotmail.com" class="vtext"> maliongan@hotmail.com</a></p>
                   <p><b><i class="fa fa-map-marker" aria-hidden="true"></i></b> Istanbul/Turkey</p>
                 </div>
 
@@ -238,7 +218,7 @@
                     <a href="https://www.linkedin.com/in/maliongan/"><i class="fa fa-linkedin-square fa-3x social-li" id="social"></i></a>
                     <a href="https://github.com/alimehmet/"><i class="fa fa-github-square fa-3x social-gh" id="social"></i></a>
                     <a href="https://www.hackerrank.com/maliongan/"><i class="fab fa-hackerrank fa-3x social-hr" id="social"></i></a>
-                    <a href="mailto:maliongan@gmail.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
+                    <a href="mailto:maliongan@hotmail.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
 
                   </ul>
                 </div>
@@ -259,7 +239,7 @@
 
             <div class="copyright">
 
-              © 2021 Ongan Tüm hakları saklıdır.
+              © 2025 Ongan All rights reserved.
 
             </div>
 
@@ -268,7 +248,7 @@
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
             <div class="design">
-              <a href="#top" id="sayfabasi"><i class="fas fa-arrow-up"></i>  Sayfa başına dön</a>
+              <a href="#top" id="sayfabasi"><i class="fas fa-arrow-up"></i> Back to top</a>
             </div>
 
           </div>
