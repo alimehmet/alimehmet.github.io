@@ -1,0 +1,10 @@
+_site/
+.jekyll-cache/
+logs/
+*.log
+docker-compose.override.yml
+.DS_Store
+Thumbs.db
+node_modules/
+.bundle/
+
