@@ -78,7 +78,7 @@ export default function Navbar() {
           >
             <div className="relative w-10 h-10 md:w-12 md:h-12">
               <Image
-                src="/img/logo/mali.png"
+                src="/img/logo/mali_anonim.png"
                 alt={`${personalInfo.brand} Logo`}
                 fill
                 className="object-contain"

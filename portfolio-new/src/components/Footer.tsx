@@ -87,7 +87,7 @@ export default function Footer() {
             >
               <div className="relative w-10 h-10">
                 <Image
-                  src="/img/logo/mali.png"
+                  src="/img/logo/mali_anonim.png"
                   alt={`${personalInfo.brand} Logo`}
                   fill
                   className="object-contain"
