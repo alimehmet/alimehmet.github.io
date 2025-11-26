@@ -118,7 +118,7 @@ export const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-// Contact Form Fields - Preserved from original site
+// Contact Form Fields
 export const contactFormFields = [
   {
     name: "first_name",
@@ -133,20 +133,6 @@ export const contactFormFields = [
     type: "text",
     placeholder: "Last Name",
     required: true,
-  },
-  {
-    name: "birth_date",
-    label: "Date of Birth",
-    type: "text",
-    placeholder: "DD/MM/YYYY",
-    required: false,
-  },
-  {
-    name: "phone_number",
-    label: "Phone Number",
-    type: "tel",
-    placeholder: "05555555555 or 0555 555 55 55",
-    required: false,
   },
   {
     name: "email",
