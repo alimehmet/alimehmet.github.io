@@ -1,0 +1,204 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 
+ * Brand Color System
+ * Primary Brand: #4d8439 (Forest Green from logo)
+ * Accent Purple: #5d2d88
+ * Accent Orange: #ea4c11
+ * 
+ * To change the brand color, update the --brand-* values below
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Brand Colors - Replace #4d8439 with your logo's exact hex if different */
+  --color-brand: #4d8439;
+  --color-brand-light: #6ba354;
+  --color-brand-dark: #3a6329;
+  --color-brand-foreground: #ffffff;
+  
+  /* Accent Colors from logo gradient */
+  --color-accent-purple: #5d2d88;
+  --color-accent-orange: #ea4c11;
+  
+  /* shadcn/ui color mappings */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Light mode - Clean and professional */
+:root {
+  --radius: 0.625rem;
+  --background: #fafafa;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  /* Primary uses brand green */
+  --primary: #4d8439;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #ef4444;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #4d8439;
+  --chart-1: #4d8439;
+  --chart-2: #5d2d88;
+  --chart-3: #ea4c11;
+  --chart-4: #f59e0b;
+  --chart-5: #06b6d4;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #4d8439;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #18181b;
+  --sidebar-border: #e4e4e7;
+  --sidebar-ring: #4d8439;
+}
+
+/* Dark mode - Modern and striking */
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  /* Primary uses brand green */
+  --primary: #6ba354;
+  --primary-foreground: #09090b;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #dc2626;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #6ba354;
+  --chart-1: #6ba354;
+  --chart-2: #8b5cf6;
+  --chart-3: #f97316;
+  --chart-4: #facc15;
+  --chart-5: #22d3ee;
+  --sidebar: #18181b;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #6ba354;
+  --sidebar-primary-foreground: #09090b;
+  --sidebar-accent: #27272a;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #27272a;
+  --sidebar-ring: #6ba354;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  *:focus {
+    outline: none;
+  }
+  *:focus-visible {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+/* Global cursor fix */
+*, *::before, *::after {
+  cursor: inherit;
+}
+
+html {
+  cursor: default;
+}
+
+a, button, [role="button"], label, summary {
+  cursor: pointer;
+}
+
+input, textarea, select {
+  cursor: text;
+}
+
+input[type="checkbox"], input[type="radio"], input[type="submit"], input[type="button"], input[type="reset"] {
+  cursor: pointer;
+}
+
+/* Custom utility classes for brand */
+@layer utilities {
+  .text-brand {
+    color: var(--color-brand);
+  }
+  .bg-brand {
+    background-color: var(--color-brand);
+  }
+  .border-brand {
+    border-color: var(--color-brand);
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-orange));
+  }
+  .gradient-brand-subtle {
+    background: linear-gradient(135deg, var(--color-brand-dark), var(--color-brand));
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-brand);
+  color: white;
+}
