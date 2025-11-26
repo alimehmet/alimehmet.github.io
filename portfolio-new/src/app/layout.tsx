@@ -13,34 +13,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mehmet Ali Ongan | Software Developer Portfolio",
+  title: "Mehmet Ali Ongan | Software Engineer",
   description:
-    "Portfolio of Mehmet Ali Ongan - Software Developer specializing in Machine Learning, Computer Vision, and Python development. Based in Istanbul, Turkey.",
+    "Software Engineer specializing in SQL & Database Design, Backend Development (Java & Spring), DevOps & CI/CD, and Cloud Platforms. Based in Istanbul, Turkey.",
   keywords: [
     "Mehmet Ali Ongan",
-    "Software Developer",
-    "Machine Learning",
-    "Computer Vision",
-    "Python",
-    "YoloV3",
+    "Software Engineer",
+    "SQL",
+    "Database Design",
+    "Java",
+    "Spring",
+    "DevOps",
+    "Backend Developer",
     "Istanbul",
-    "Portfolio",
   ],
   authors: [{ name: "Mehmet Ali Ongan" }],
   creator: "Mehmet Ali Ongan",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Mehmet Ali Ongan | Software Developer Portfolio",
+    title: "Mehmet Ali Ongan | Software Engineer",
     description:
-      "Portfolio of Mehmet Ali Ongan - Software Developer specializing in Machine Learning, Computer Vision, and Python development.",
-    siteName: "Ongan Portfolio",
+      "Software Engineer specializing in SQL & Database Design, Backend Development (Java & Spring), DevOps & CI/CD, and Cloud Platforms.",
+    siteName: "Mehmet Ali Ongan",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mehmet Ali Ongan | Software Developer Portfolio",
+    title: "Mehmet Ali Ongan | Software Engineer",
     description:
-      "Portfolio of Mehmet Ali Ongan - Software Developer specializing in Machine Learning, Computer Vision, and Python development.",
+      "Software Engineer specializing in SQL & Database Design, Backend Development (Java & Spring), DevOps & CI/CD, and Cloud Platforms.",
   },
   robots: {
     index: true,
