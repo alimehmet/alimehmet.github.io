@@ -36,7 +36,24 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 export default function ContactSection() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [filledFields, setFilledFields] = useState<Set<string>>(new Set());
   const formRef = useRef<HTMLFormElement>(null);
+
+  const isFieldFloating = (fieldName: string) => {
+    return focusedField === fieldName || filledFields.has(fieldName);
+  };
+
+  const handleFieldChange = (fieldName: string, value: string) => {
+    setFilledFields((prev) => {
+      const newSet = new Set(prev);
+      if (value) {
+        newSet.add(fieldName);
+      } else {
+        newSet.delete(fieldName);
+      }
+      return newSet;
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,6 +73,7 @@ export default function ContactSection() {
       if (response.ok) {
         setStatus("success");
         formRef.current?.reset();
+        setFilledFields(new Set());
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         setStatus("error");
@@ -227,7 +245,7 @@ export default function ContactSection() {
                       <Label
                         htmlFor={field.name}
                         className={`absolute left-3 transition-all duration-200 pointer-events-none ${
-                          focusedField === field.name
+                          isFieldFloating(field.name)
                             ? "-top-2.5 text-xs bg-card px-1 text-primary"
                             : "top-3 text-sm text-muted-foreground"
                         }`}
@@ -242,9 +260,8 @@ export default function ContactSection() {
                         required={field.required}
                         className="h-12 bg-background/50 border-border/50 focus:border-primary transition-colors pt-2"
                         onFocus={() => setFocusedField(field.name)}
-                        onBlur={(e) => {
-                          if (!e.target.value) setFocusedField(null);
-                        }}
+                        onBlur={() => setFocusedField(null)}
+                        onChange={(e) => handleFieldChange(field.name, e.target.value)}
                       />
                     </div>
                   </div>
@@ -256,7 +273,7 @@ export default function ContactSection() {
                 <Label
                   htmlFor="message"
                   className={`absolute left-3 transition-all duration-200 pointer-events-none ${
-                    focusedField === "message"
+                    isFieldFloating("message")
                       ? "-top-2.5 text-xs bg-card px-1 text-primary"
                       : "top-3 text-sm text-muted-foreground"
                   }`}
@@ -270,9 +287,8 @@ export default function ContactSection() {
                   rows={5}
                   className="resize-none bg-background/50 border-border/50 focus:border-primary transition-colors pt-5"
                   onFocus={() => setFocusedField("message")}
-                  onBlur={(e) => {
-                    if (!e.target.value) setFocusedField(null);
-                  }}
+                  onBlur={() => setFocusedField(null)}
+                  onChange={(e) => handleFieldChange("message", e.target.value)}
                 />
               </div>
 
