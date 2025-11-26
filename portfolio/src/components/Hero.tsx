@@ -197,8 +197,7 @@ export default function Hero() {
                 <motion.a
                   key={link.name}
                   href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(link.url.startsWith("mailto:") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
                   className="p-3 rounded-full bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}

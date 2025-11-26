@@ -106,7 +106,7 @@ export default function Footer() {
                 <motion.a
                   key={link.name}
                   href={link.url}
-                  target="_blank"
+                  {...(link.url.startsWith("mailto:") ? {} : { target: "_blank" })}
                   rel="noopener noreferrer"
                   className="p-2.5 rounded-lg bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
                   whileHover={{ scale: 1.1, y: -2 }}

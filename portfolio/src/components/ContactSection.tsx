@@ -205,8 +205,7 @@ export default function ContactSection() {
                   <motion.a
                     key={link.name}
                     href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(link.url.startsWith("mailto:") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
                     className="p-3 rounded-xl bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}

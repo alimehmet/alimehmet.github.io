@@ -1,0 +1,28 @@
+# robots.txt for https://alimehmet.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alimehmet.github.io/sitemap.xml
+
+# Block unnecessary files
+Disallow: /_next/static/chunks/*.txt
+Disallow: /__next*
+
+# Allow all crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
