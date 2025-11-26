@@ -193,22 +193,26 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="mt-10 flex gap-4 justify-center lg:justify-start"
             >
-              {socialLinks.map((link, index) => (
-                <motion.a
-                  key={link.name}
-                  href={link.url}
-                  {...(link.url.startsWith("mailto:") ? {} : { target: "_blank", rel: "noopener noreferrer" })}
-                  className="p-3 rounded-full bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  aria-label={link.name}
-                >
-                  {socialIcons[link.icon]}
-                </motion.a>
-              ))}
+              {socialLinks.map((link, index) => {
+                const isMailto = link.url.startsWith("mailto:");
+                return (
+                  <motion.a
+                    key={link.name}
+                    href={link.url}
+                    target={isMailto ? "_self" : "_blank"}
+                    rel={isMailto ? undefined : "noopener noreferrer"}
+                    className="p-3 rounded-full bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7 + index * 0.1 }}
+                    aria-label={link.name}
+                  >
+                    {socialIcons[link.icon]}
+                  </motion.a>
+                );
+              })}
             </motion.div>
           </motion.div>
 

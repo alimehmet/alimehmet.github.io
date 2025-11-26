@@ -102,20 +102,23 @@ export default function Footer() {
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
-              {socialLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.url}
-                  {...(link.url.startsWith("mailto:") ? {} : { target: "_blank" })}
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={link.name}
-                >
-                  {socialIcons[link.icon]}
-                </motion.a>
-              ))}
+              {socialLinks.map((link) => {
+                const isMailto = link.url.startsWith("mailto:");
+                return (
+                  <motion.a
+                    key={link.name}
+                    href={link.url}
+                    target={isMailto ? "_self" : "_blank"}
+                    rel={isMailto ? undefined : "noopener noreferrer"}
+                    className="p-2.5 rounded-lg bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label={link.name}
+                  >
+                    {socialIcons[link.icon]}
+                  </motion.a>
+                );
+              })}
             </div>
           </motion.div>
 

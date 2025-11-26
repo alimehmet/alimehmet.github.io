@@ -201,27 +201,24 @@ export default function ContactSection() {
             <div>
               <p className="text-sm text-muted-foreground mb-4">Follow me on social media</p>
               <div className="flex gap-3">
-                {socialLinks.map((link, index) => {
-                  const isMailto = link.url.startsWith("mailto:");
-                  return (
-                    <motion.a
-                      key={link.name}
-                      href={link.url}
-                      target={isMailto ? "_self" : "_blank"}
-                      rel={isMailto ? undefined : "noopener noreferrer"}
-                      className="p-3 rounded-xl bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      aria-label={link.name}
-                    >
-                      {socialIcons[link.icon]}
-                    </motion.a>
-                  );
-                })}
+                {socialLinks.map((link, index) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-xl bg-card border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    aria-label={link.name}
+                  >
+                    {socialIcons[link.icon]}
+                  </motion.a>
+                ))}
               </div>
             </div>
           </motion.div>
