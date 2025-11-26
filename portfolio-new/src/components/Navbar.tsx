@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { navLinks, personalInfo } from "@/lib/data";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,6 +116,11 @@ export default function Navbar() {
                 />
               </motion.a>
             ))}
+            
+            {/* Theme Toggle */}
+            <div className="ml-4 pl-4 border-l border-border">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -171,6 +177,16 @@ export default function Navbar() {
                     {link.name}
                   </motion.a>
                 ))}
+                
+                {/* Mobile Theme Toggle */}
+                <motion.div
+                  className="px-4 py-3 flex justify-center"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: navLinks.length * 0.05 }}
+                >
+                  <ThemeToggle />
+                </motion.div>
               </div>
             </motion.div>
           )}
