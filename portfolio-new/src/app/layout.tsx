@@ -29,19 +29,30 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Mehmet Ali Ongan" }],
   creator: "Mehmet Ali Ongan",
+  metadataBase: new URL("https://alimehmet.github.io"),
   openGraph: {
     type: "website",
     locale: "en_US",
+    url: "https://alimehmet.github.io",
     title: "Mehmet Ali Ongan | Software Engineer",
     description:
       "Software Engineer specializing in SQL & Database Design, Backend Development (Java & Spring), DevOps & CI/CD, and Cloud Platforms.",
     siteName: "Mehmet Ali Ongan",
+    images: [
+      {
+        url: "/img/logo/mali.png",
+        width: 500,
+        height: 500,
+        alt: "Mehmet Ali Ongan Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mehmet Ali Ongan | Software Engineer",
     description:
       "Software Engineer specializing in SQL & Database Design, Backend Development (Java & Spring), DevOps & CI/CD, and Cloud Platforms.",
+    images: ["/img/logo/mali.png"],
   },
   robots: {
     index: true,
