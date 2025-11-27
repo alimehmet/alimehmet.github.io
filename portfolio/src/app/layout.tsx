@@ -143,10 +143,10 @@ export const metadata: Metadata = {
       "Senior Software Engineer specializing in SQL & Database Design, Java Spring Backend Development, DevOps, and Cloud Platforms. Based in Istanbul, Turkey.",
     images: [
       {
-        url: "/img/logo/mali_anonim.png",
-        width: 500,
-        height: 500,
-        alt: "Mehmet Ali Ongan - Software Engineer Logo",
+        url: "/img/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mehmet Ali Ongan - Software Engineer",
         type: "image/png",
       },
     ],
@@ -158,7 +158,7 @@ export const metadata: Metadata = {
     title: "Mehmet Ali Ongan | Software Engineer - Backend Developer & Database Expert",
     description:
       "Senior Software Engineer specializing in SQL & Database Design, Java Spring Backend Development, DevOps, and Cloud Platforms. Istanbul, Turkey.",
-    images: ["/img/logo/mali_anonim.png"],
+    images: ["/img/og-image.png"],
     creator: "@maliongan",
   },
   
@@ -221,7 +221,7 @@ const jsonLd = {
   alternateName: ["Ali Ongan", "M. Ali Ongan", "maliongan"],
   description: "Senior Software Engineer specializing in SQL & Database Design, Java Spring Backend Development, DevOps, and Cloud Platforms.",
   url: "https://alimehmet.github.io",
-  image: "https://alimehmet.github.io/img/logo/mali_anonim.png",
+  image: "https://alimehmet.github.io/img/og-image.png",
   email: "maliongan@hotmail.com",
   jobTitle: "Software Engineer",
   worksFor: {
